@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- FONTAWASOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- MIS ESTILOS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+        <header class="main-header ">
+            <nav class="navbar  navbar-expand-md main-navbar">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/logo1.png" alt="" class="main-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="main-menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav nav-list-item me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/register/register.html">Registro</a>
+                        </li>
+                </ul>
+                <div class="header-user">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div>JOHN DOE</div>
+                    <img src="https://img.freepik.com/free-icon/user_318-159711.jpg?w=2000" alt="" class="header-user-img">
+                </div>
+                </div>
+            </div>
+            </nav></header>
+
+<!------HEADER END ------>
+
+
+
+<!-------CAROUSEL------->
+
+<div id="carouselMain" class="carousel slide carousel-container-main ">
+    <div class="carousel-indicators ">
+        <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active button-carousel" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1"  class="button-carousel" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" class="button-carousel"  aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="/assets/images/carousel/perifericos.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption info-carousel">
+            <p>DESCUENTOS DEL 15% EN PERIFERICOS</p>
+        </div> 
+        </div>
+        <div class="carousel-item ">
+            <img src="/assets/images/carousel/productos.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption info-carousel">
+                <p>CONTAMOS CON LAS MEJORES MARCAS</p>
+            </div> 
+            </div>
+            <div class="carousel-item ">
+                <img src="/assets/images/carousel/pc-a-medida.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption info-carousel">
+                    <p>ARMA TU SETUP A MEDIDA CON NOSOTROS</p>
+                </div> 
+                </div>
+
+    </div>
+    <button class="carousel-control-prev button-carousel" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next button-carousel" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+<!-------------------
+-------CAROUSEL END----
+-------------------->
+
+
+
+<main >
+    <!----- CONTAINER CARDS ----->
+    <div class="container-products bg-principal">
+        <section class="container main-container contanier-lg ">
+        <h1>NUEVOS INGRESOS</h1>
+        <div class="container  container-cards">
+        
+        <div class="cards ">
+            <div class="card-header">
+                <img src="/assets/images/Productos/MotherMsi-b550.png" alt="Motherboard Msi B550">
+            </div>
+            <div class="card-body">
+                <h2 class="product-name">Motherboard MSI B550 MPG GAMING PLUS</h2>
+                <p class="product-description">Placa base de alto rendimiento para gaming con soporte para procesadores AMD Ryzen. Ofrece tecnología PCIe 4.0 para gráficos y almacenamiento más rápidos, además de un diseño de enfriamiento eficiente.  </p>
+                <div class="precios">
+                    <div class="fecha-ingreso">
+                        <p>Fecha de Ingreso</p>
+                        <p>13/08/2023</p>
+                    </div>
+                    <p class="precio">$190.000</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="" class="button-detalles">Detalles</button>
+                <button type=""> Comprar</button>
+            </div>
+        </div>
+
+        <div class="cards ">
+            <div class="card-header">
+                <img src="/assets/images/Productos/procesador-amd-ryzen-7-5800x.png" alt="Procesador Ryzen 7 5800x">
+            </div>
+            <div class="card-body">
+                <h2 class="product-name">Procesador AMD Ryzen 7 5800X</h2>
+                <p class="product-description"> Procesador de 8 núcleos y 16 hilos de la serie AMD Ryzen 5000. Arquitectura Zen 3 para un rendimiento excepcional en tareas exigentes.</p>
+                <div class="precios">
+                    <div class="fecha-ingreso">
+                        <p>Fecha de Ingreso</p>
+                        <p>30/07/2023</p>
+                    </div>
+                    <p class="precio">$360.000</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="" class="button-detalles">Detalles</button>
+                <button type=""> Comprar</button>
+            </div>
+        </div>
+
+        <div class="cards ">
+            <div class="card-header">
+                <img src="/assets/images/Productos/Teclado-Corsair-k70.png" alt="Teclado Corsair K70">
+            </div>
+            <div class="card-body">
+                <h2 class="product-name">Teclado Mecánico Corsair K70 RGB</h2>
+                <p class="product-description">El teclado mecánico Corsair K70 RGB presenta interruptores mecánicos de alta calidad que ofrecen una sensación táctil precisa y durabilidad. Con retroiluminación RGB personalizable por tecla, permite crear configuraciones de iluminación únicas. </p>
+                <div class="precios">
+                    <div class="fecha-ingreso">
+                        <p>Fecha de Ingreso</p>
+                        <p>02/08/2023</p>
+                    </div>
+                    <p class="precio">$90.000</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="" class="button-detalles">Detalles</button>
+                <button type=""> Comprar</button>
+            </div>
+        </div>
+
+        <div class="cards ">
+            <div class="card-header">
+                <img src="/assets/images/Productos/Ram-VengancePro.png" alt="Memorias Ram VengancePro">
+            </div>
+            <div class="card-body">
+                <h2 class="product-name">Memoria RAM Vengeance RGB Pro 32GB</h2>
+                <p class="product-description">La Memoria RAM Vengeance RGB Pro de 32GB a 3200MHz consta de dos módulos de 16GB cada uno, configurados en modo dual-channel para un rendimiento eficiente. Equipada con tecnología DDR4, ofrece una velocidad de transferencia de datos de 3200MHz, lo que mejora la capacidad de respuesta del sistema y el manejo de cargas de trabajo intensivas.</p>
+                <div class="precios">
+                    <div class="fecha-ingreso">
+                        <p>Fecha de Ingreso</p>
+                        <p>17/08/2023</p>
+                    </div>
+                    <p class="precio">$80.000</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="" class="button-detalles">Detalles</button>
+                <button type=""> Comprar</button>
+            </div>
+        </div>
+
+
+        </div>
+        </section>
+        <section class="container main-container contanier-lg ">
+            <h1>PRODUCTOS DESTACADOS</h1>
+        <div class="container-cards">
+        
+        <div class="cards">
+            <div class="card-header">
+                <img src="/assets/images/Productos/Nvidia-rtx3060.png" alt="Tarjeta Grafica RTX 3060">
+            </div>
+            <div class="card-body">
+                <h2 class="product-name">Tarjeta Gráfica ASUS NVIDIA GeForce RTX 3060 DUAL</h2>
+                <p class="product-description">La tarjeta gráfica NVIDIA GeForce RTX 3060 está equipada con la arquitectura Ampere y 12 GB de memoria GDDR6. Ofrece un rendimiento excepcional en juegos y aplicaciones creativas gracias a sus núcleos CUDA y núcleos de trazado de rayos.</p>
+                <div class="precios">
+                    <div class="fecha-ingreso">
+                        <p>Fecha de Ingreso</p>
+                        <p>17/10/2022</p>
+                    </div>
+                    <p class="precio">$590.000</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="" class="button-detalles">Detalles</button>
+                <button type=""> Comprar</button>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card-header">
+                <img src="/assets/images/Productos/Monitor-Asus-165mhz.png" alt="Monitor Asus 1440p">
+            </div>
+            <div class="card-body">
+                <h2 class="product-name">Monitor ASUS TUF Gaming VG27AQ 1440p 165Hz</h2>
+                <p class="product-description">Monitor gaming de 27" con resolución 1440p y tasa de refresco de 165 Hz. Compatible con G-Sync y FreeSync.</p>
+                <div class="precios">
+                    <div class="fecha-ingreso">
+                        <p>Fecha de Ingreso</p>
+                        <p>27/12/2022</p>
+                    </div>
+                    <p class="precio">$400.000</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="" class="button-detalles">Detalles</button>
+                <button type=""> Comprar</button>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card-header">
+                <img src="/assets/images/Productos/Teclado-Mecanico-Steelseries.png" alt="Teclado Steelseries ApexPro">
+            </div>
+            <div class="card-body">
+                <h2 class="product-name">Teclado Mecánico SteelSeries Apex Pro</h2>
+                <p class="product-description">Teclado mecánico con switches ajustables y retroiluminación RGB. Diseñado para personalizar la experiencia de escritura y juego.</p>
+                <div class="precios">
+                    <div class="fecha-ingreso">
+                        <p>Fecha de Ingreso</p>
+                        <p>07/05/2023</p>
+                    </div>
+                    <p class="precio">$190.000</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="" class="button-detalles">Detalles</button>
+                <button type=""> Comprar</button>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card-header">
+                <img src="/assets/images/Productos/Ssd-samsung1tb.png" alt="SSD Samsung 1tb">
+            </div>
+            <div class="card-body">
+                <h2 class="product-name">SSD Samsung 1TB NVMe M.2</h2>
+                <p class="product-description"> SSD de 1TB con interfaz PCIe Gen3/Gen4 para velocidades de lectura/escritura rápidas. Ideal para almacenamiento de alta velocidad.</p>
+                <div class="precios">
+                    <div class="fecha-ingreso">
+                        <p>Fecha de Ingreso</p>
+                        <p>09/04/2023</p>
+                    </div>
+                    <p class="precio">$60.000</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="" class="button-detalles">Detalles</button>
+                <button type=""> Comprar</button>
+            </div>
+        </div>
+
+
+        </div>
+        </section>
+    </div>
+    <section class="features-section">
+    <div class="row g-0">
+        <div class="col-12  col-lg-4">
+            <div class="main-feature">
+                <div>
+                    <i class="fa-solid fa-computer"></i>
+                    <p>Armamos tu pc a medida</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="main-feature">
+                <div>
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p>Envío a todo el país</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="main-feature">
+                <div>
+                    <i class="fa-solid fa-credit-card"></i>
+                    <p>12 Cuotas sin interés</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+</main>
+
+<footer class="main-footer row gx-0">
+    
+    <section class="redes-soc col-12 col-md-6 col-lg-4">
+        <div class="container-rs">
+            <div class="redes">
+                <i class="fa-brands fa-instagram"></i>
+                <a rel="stylesheet" href="https://www.instagram.com/" target="_blank">Instagram</a>
+            </div>
+            <div class="redes">
+                <i class="fa-brands fa-facebook-f"></i>
+                <a rel="stylesheet" href="https://www.facebook.com/" target="_blank">Facebook</a>
+            </div>
+            <div class="redes">
+                <i class="fa-brands fa-x-twitter"></i>
+                <a rel="stylesheet" href="https://www.twitter.com/" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </section>
+    <section class="logo-copy col-12  col-lg-4">
+        <img src="/assets/images/logo1.png" 
+        alt="logo">
+        <p>Copyright © 2023 - GamerX. Todos los derechos reservados.</p>
+    </section>
+    <section class="footer-info col-12 col-md-6 col-lg-4">
+        <div class="contactos ">
+            <div class="dato-contacto">
+                <i class="fa-brands fa-whatsapp"></i>
+                <p>3462-568791</p>
+            </div>
+            <div class="dato-contacto">
+                <i class="fa-solid fa-envelope"></i>
+                <p>GamerX@gmail.com</p>
+            </div>
+            
+            <div class="dato-contacto">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Lopez 346. Vdo. Tto. - Santa Fe</p>
+            </div>
+            
+        </div>
+    </section>
+
+    
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
