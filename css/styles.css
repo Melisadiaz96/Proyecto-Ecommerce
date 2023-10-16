@@ -383,9 +383,9 @@ flex-grow: 1;
 ----------- FOOTER END ----------
 ---------------------------------*/
 
-/*------------------------------------------
--------------------- REGISTRO---------------
-------------------------------------------*/
+/*---------------------------------
+----------------------------- REGISTRO--------------------------
+-------------------------------*/
 
 .main-container-form, .main-container-contact {
     padding: 2rem .75rem ;
@@ -454,6 +454,7 @@ flex-grow: 1;
     color: var(--primary-color);
     border-radius: 15px;
     transition: all .1s ease;
+
 }
 
 .button-submit:hover {
@@ -652,6 +653,180 @@ flex-grow: 1;
 
 /*------------------------------------------------
 ------------------ ABOUT US END------------------
+------------------------------------------------*/
+
+/*------------------------------------------------
+------------------ PAGINAS ADMIN ------------------
+------------------------------------------------*/
+.adminProducts {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-width: 1100px;
+}
+
+.table-admin  {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    vertical-align: top;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.1), 8px 8px 8px rgba(0,0,0,.1);
+}
+
+.table-admin th {
+    text-align: center;
+    padding: .5rem;
+}
+
+.table-admin tr:not(:last-child) {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+
+.table-admin td {
+    padding: .65rem;
+    
+}
+
+
+
+.table-body-admin tr td:not(.table-products tr td:nth-child(3)){
+    text-align: center;
+} 
+
+.img-table {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.buttons-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.buttons-action button:first-child{
+    color: rgb(117, 171, 117);
+}
+
+.buttons-action button:last-child{
+    color: var(--red-color);
+}
+
+.button-action {
+    border: none;
+    border-radius: 3px;
+    transition: .5s;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.button-action i {
+    font-size: 1.25rem;
+}
+
+
+.button-action:hover {
+    box-shadow: 2px 2px 3px 0 #5f5f5f;
+}
+
+.boton-agregar {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--terciary-color);
+    align-self: end;
+    transition: all .2s ease;
+}
+
+.boton-agregar:hover{
+    background-color: var(--secondary-color);
+    color: var(--terciary-color);
+    box-shadow: 2px 2px 3px 0 #403d3d;
+}
+
+/* ---------
+-----MODAL--
+------------*/
+.modal-product {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.15rem;
+    color: var(--terciary-color);
+
+    .modal-header {
+        border-bottom: none;
+        height: 50px;
+        padding: 1rem;
+    }
+
+    .modal-body{
+        padding: 0 1.5rem;
+    }
+    .modal-footer {
+        border-top: none;
+        
+
+        .btn-cancel {
+            background-color: var(--secondary-color);
+            border: none;
+            
+        }
+
+        .btn-submit {
+            background-color: var(--terciary-color);
+            border: none;
+            
+        }
+
+        .btn-submit:hover, .btn-cancel:hover{
+            font-weight: 500;
+                box-shadow: -5px -5px 2px rgba(255, 255, 255, 0.199), 5px 5px 5px rgba(0,0,0,.1), 8px 8px 8px rgba(0,0,0,.1);
+        }
+    }
+}
+
+.modal-product .modal-body form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.inputModalProduct {
+    
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid var(--red-color);
+        border-radius: 10px;
+        resize: none;
+        width: 100%;
+    
+}
+
+.inputModalProduct:focus{
+    outline: none;
+    background-color: transparent;
+}
+
+.inputModalProduct::placeholder{
+    font-style: italic;
+    padding-left: 8px;
+    font-size: 1rem;
+}
+
+/* ---------
+---MODAL END--
+------------*/
+
+
+/*------------------------------------------------
+------------------ PAGINAS ADMIN END ------------------
 ------------------------------------------------*/
 
 @media screen and (width > 767px) {

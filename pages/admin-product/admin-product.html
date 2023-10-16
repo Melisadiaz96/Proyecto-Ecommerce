@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Products</title>
+    <!-- FONTAWASOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- MIS ESTILOS -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header class="main-header ">
+        <nav class="navbar  navbar-expand-md main-navbar">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/images/logo1.png" alt="" class="main-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="main-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav nav-list-item me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/register/register.html">Registro</a>
+                        </li>
+                    </ul>
+                    <div class="header-user">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div>JOHN DOE</div>
+                        <img src="https://img.freepik.com/free-icon/user_318-159711.jpg?w=2000" alt=""
+                            class="header-user-img">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="bg-principal d-flex justify-content-center align-items-center ">
+        <div class="adminProducts">
+            <table class="table-admin">
+                <thead>
+                    <tr>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Fecha de Ingreso</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider table-body-admin table-products">
+                </tbody>
+            </table>
+
+            <button type="button" class="btn m-2 me-0 boton-agregar" data-bs-toggle="modal" data-bs-target="#modalForm">
+                Agregar producto
+            </button>
+
+            <div class="modal fade " id="modalForm" tabindex="-1" aria-labelledby="modalForm"
+                aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content modal-product">
+                        <div class="modal-header border-b-0">
+
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body ">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nombreProducto" class="col-form-label">Nombre del producto:</label>
+                                    <input type="text" minlength="10" maxlength="80" class="inputModalProduct" id="nombreProducto" placeholder="Placa de video NVIDIA GeForce RTX 3060 Ti" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="precioProducto" class="col-form-label">Precio:</label>
+                                    <input type="number" class=" inputModalProduct" min="1" max="1500000" step=".01" id="precioProducto" placeholder="$500000" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="imagenProducto" class="col-form-label" >Imagen:</label>
+                                    <input type="file" accept="image/jpeg, image/png, image/jpg"  class=" inputModalProduct" id="imagenProducto" required>
+                                </div>
+                                
+
+                                <div class="mb-3">
+                                    <label for="descripcionProducto" class="col-form-label">Descrpición:</label>
+                                    <textarea class="inputModalProduct" id="descripcionProducto" minlength="10" maxlength="300" placeholder="Descripción del producto a agregar..." required></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-submit">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="/JS/storage.js"></script>
+    <script src="/JS/admin.js"></script>
+</body>
+
+</html>
