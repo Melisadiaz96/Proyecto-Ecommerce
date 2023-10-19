@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav nav-list-item me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
@@ -75,8 +75,7 @@
                 Agregar producto
             </button>
 
-            <div class="modal fade " id="modalForm" tabindex="-1" aria-labelledby="modalForm"
-                aria-hidden="true">
+            <div class="modal fade " id="modalForm" tabindex="-1" aria-labelledby="modalForm" aria-hidden="true">
                 <div class="modal-dialog ">
                     <div class="modal-content modal-product">
                         <div class="modal-header border-b-0">
@@ -84,32 +83,41 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body ">
-                            <form>
+                            <form id="formulario">
                                 <div class="mb-3">
                                     <label for="nombreProducto" class="col-form-label">Nombre del producto:</label>
-                                    <input type="text" minlength="10" maxlength="80" class="inputModalProduct" id="nombreProducto" placeholder="Placa de video NVIDIA GeForce RTX 3060 Ti" required>
+                                    <input type="text" minlength="5" maxlength="80" name="nombre" class="inputModalProduct"
+                                        id="nombreProducto" placeholder="Placa de video NVIDIA GeForce RTX 3060 Ti"
+                                        required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="precioProducto" class="col-form-label">Precio:</label>
-                                    <input type="number" class=" inputModalProduct" min="1" max="1500000" step=".01" id="precioProducto" placeholder="$500000" required>
+                                    <input type="number" name="precio" class=" inputModalProduct" min="1" max="1500000" step=".01"
+                                        id="precioProducto" placeholder="$500000" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="imagenProducto" class="col-form-label" >Imagen:</label>
-                                    <input type="file" accept="image/jpeg, image/png, image/jpg"  class=" inputModalProduct" id="imagenProducto" required>
+                                    <label for="imagenProducto" class="col-form-label">Imagen:</label>
+                                    <input type="url" name="imagen"
+                                        class=" inputModalProduct" id="imagenProducto" required>
                                 </div>
-                                
+
 
                                 <div class="mb-3">
                                     <label for="descripcionProducto" class="col-form-label">Descrpición:</label>
-                                    <textarea class="inputModalProduct" id="descripcionProducto" minlength="10" maxlength="300" placeholder="Descripción del producto a agregar..." required></textarea>
+                                    <textarea class="inputModalProduct" id="descripcionProducto" minlength="5"
+                                    name="descripcion" 
+                                        maxlength="300" placeholder="Descripción del producto a agregar..."
+                                        required></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary btn-cancel"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary btn-submit">Agregar</button>
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-primary btn-submit">Agregar</button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -121,13 +129,15 @@
 
 
 
-
+    <!-- SCRIPT BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-
-    <script src="/JS/storage.js"></script>
+    <!-- SCRIPT SWEETALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- MIS SCRIPT  -->
     <script src="/JS/admin.js"></script>
+    <script src="/JS/storage.js"></script>
 </body>
 
 </html>
