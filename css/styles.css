@@ -55,11 +55,30 @@ body {
     transition: all .3s ease;
 }
 
+.contain-btn-login{
+    
+    
+    display: flex;
+    
+}
 
+.button-login {
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid var(--red-color);
+    border-top: 1px solid var(--red-color);
+    border-radius: 7px;
+    padding: .5rem;
+    margin: auto;
+}
 
 .main-menu-icon {
     color: white;
 }
+
+
+
 
 .main-menu-icon i {
     font-size: 1.5rem;
@@ -83,16 +102,18 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    width: 100%;
     justify-content: space-between;
-    margin: .5rem;
-    padding-top: 1.5rem;
-    vertical-align: middle;
+    
+
+
 }
 
 
 
 .header-user i {
     font-size: 1.5rem;
+    padding: 0 20px;
 }
 
 .header-user-img {
@@ -184,11 +205,14 @@ flex-grow: 1;
     min-height: 400px;
     max-width: 320px;
     margin: auto;
+    width: 100%;
 }
+
+
 
 .card-header img {
     width: 100%;
-    height: 100%;
+    max-height: 216px ;
     object-fit: cover;
     overflow: hidden;
     border-radius: 8px 8px 0 0;
@@ -421,6 +445,12 @@ flex-grow: 1;
     font-size: 19px;
 }
 
+.msg-error {
+    color: var(--red-color);
+    font-size: .75rem;
+    position: absolute;
+    font-style: italic;
+}
 
 .main-form .input-field{
     display: block;
@@ -437,6 +467,13 @@ flex-grow: 1;
     font-style: italic;
     font-size: 14px;
     
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover {
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s;
+
 }
 
 
@@ -829,6 +866,90 @@ flex-grow: 1;
 ------------------ PAGINAS ADMIN END ------------------
 ------------------------------------------------*/
 
+/* --------------------------------------------
+------------------MODAL LOGIN------------------
+----------------------------------------------*/
+
+.modal-backdrop.show{
+    z-index: 2 !important;
+    background-color: #000000b9;
+    opacity: 1;
+}
+
+.modal-log {
+    height: 100%;
+    display: flex;
+    
+}
+
+.modal-login {
+    color: var(--terciary-color);
+    background-color: var(--primary-color);
+    width: 80%;
+    margin: auto;
+    margin-top: 10dvh;
+    align-self: center;
+    
+
+    .modal-header{
+        border-bottom: none;
+        background-color: var(--secondary-color);
+        
+        .btn-close{
+            position: absolute;
+            left: 88%;
+        }
+        .title-modal-login{
+            margin: auto;
+            color: var(--primary-color);
+        }
+    }
+    .modal-body{
+        padding: 12px;
+        width: 90%;
+        margin: auto;
+        .form-control{
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid var(--red-color);
+            border-radius: 8px;
+        }
+        .form-control::placeholder{
+            font-style: italic;
+            font-size: 15px;
+        }
+        
+    }
+    .modal-footer{
+        border-top: none;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        .btn{
+            margin: auto;
+            padding: 10px 12px;
+        }
+        .link-register{
+            margin: auto;
+            font-size: 13px;
+            padding: 5px 0;
+            font-style: italic;
+        }
+        .link-register a {
+            color: var(--tercery-color);
+            font-weight: 600;
+        }
+    }
+}
+
+
+
+
+
+/* --------------------------------------------
+------------------MODAL LOGIN END--------------
+----------------------------------------------*/
+
 @media screen and (width > 767px) {
     .main-navbar {
         padding: 0;
@@ -850,8 +971,13 @@ flex-grow: 1;
     
     }
 
-    .nav-list-item .nav-item {
-        padding: 0 1rem;
+    .nav-list-item{
+        width: 100%;
+        margin-bottom: 0 !important;
+
+        .nav-item{
+            padding: 0 .5rem;
+        }
     }
 
     .nav-list-item .nav-item:not(:last-child) {
@@ -859,12 +985,15 @@ flex-grow: 1;
 
     }
 
-    .nav-list-item .nav-link {
-        border-radius: 50%
-    }
+
 
     .header-user {
         padding-top: 0;
+        justify-content: end;
+    }
+
+    .header-user i {
+        padding: 0 .5rem;
     }
 
     /* ----- HEADER END ---- */

@@ -12,51 +12,55 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <header class="main-header">
-        <nav class="navbar navbar-expand-md main-navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="/assets/images/logo1.png" alt="" class="main-logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="main-menu-icon">
-                <i class="fa-solid fa-bars"></i>
-            </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-list-item me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="/index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="/pages/register/register.html">Registro</a>
-                    </li>
-            </ul>
-            <div class="header-user">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <div>JOHN DOE</div>
-                <img src="https://img.freepik.com/free-icon/user_318-159711.jpg?w=2000" alt="" class="header-user-img">
+    <header class="main-header ">
+        <nav class="navbar  navbar-expand-md main-navbar">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/images/logo1.png" alt="" class="main-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="main-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav nav-list-item me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    <div class="header-user">
+                        
+                            <a id="registerNav" class="nav-link active" href="/pages/register/register.html">Registrate</a>
+                        
+                        <button id="login" class="button-login">Iniciar sesión</button>
+                        <img class="d-none" src="https://img.freepik.com/free-icon/user_318-159711.jpg?w=2000" alt=""
+                        class="header-user-img">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
         </nav>
     </header>
 
     <main class="main-container-form bg-principal">
-        <form action="" class="main-form" >
+        <form action="" class="main-form form-registro" >
             <h1>Registrarse</h1>
             <div class="form-wrapper">
             <div class="input-wrapper">
                 <label for="nameRegister" class="input-label">Nombre completo</label>
                 <input type="text" name="name" id="nameRegister" class="input-field" placeholder="Melisa Diaz" minlength="5" maxlength="50">
             </div>
-            <div class="input-wrapper">
+            <div class="input-wrapper" id="container-email">
                 <label for="emailRegister" class="input-label">Correo electrónico</label>
                 <input type="email" name="correo" id="emailRegister" class="input-field" placeholder="gamerx@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$">
             </div>
@@ -64,9 +68,9 @@
                 <label for="passwordRegister" class="input-label">Contraseña</label>
                 <input type="password" name="contraseña" id="passwordRegister" required  class="input-field" placeholder="********" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$">
             </div>
-            <div class="input-wrapper">
+            <div class="input-wrapper" id="container-passwordRepeat">
                 <label for="repeatPasswordRegister" class="input-label">Repetir contraseña</label>
-                <input type="password" name="contraseña" id="repeatPasswordRegister" required  class="input-field" placeholder="********" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" >
+                <input type="password" name="contraseñaRepetida" id="repeatPasswordRegister" required  class="input-field" placeholder="********" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" >
             </div>
             <div class="input-wrapper">
                 <label for="birthRegister" class="input-label">Fecha de nacimiento</label>
@@ -74,37 +78,37 @@
             </div>
             <div class="input-wrapper">
                 <label for="provinciaRegister" class="input-label">Provincia</label>
-                <select name="" id="provinciaRegister" required class="input-field">
-                    <option value="0">-</option>
-                    <option value="1">Buenos Aires</option>
-                    <option value="2">Catamarca</option>
-                    <option value="3">Chubut</option>
-                    <option value="4">Chaco</option>
-                    <option value="5">Corrientes</option>
-                    <option value="6">Córdoba</option>
-                    <option value="7">Entre Ríos</option>
-                    <option value="8">Formosa</option>
-                    <option value="9">Jujuy</option>
-                    <option value="10">La Pampa</option>
-                    <option value="11">La Rioja</option>
-                    <option value="12">Mendoza</option>
-                    <option value="13">Misiones</option>
-                    <option value="14">Neuquén</option>
-                    <option value="15">Río Negro</option>
-                    <option value="16">Salta</option>
-                    <option value="17">San Juan</option>
-                    <option value="18">San Luis</option>
-                    <option value="19">Santa Cruz</option>
-                    <option value="20">Santa Fe</option>
-                    <option value="21">Santiago del Estero</option>
-                    <option value="22">Tierra del Fuego</option>
-                    <option value="23">Tucumán</option>
+                <select name="provincia" id="provinciaRegister" required class="input-field">
+                    <option value="">-</option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Catamarca">Catamarca</option>
+                    <option value="chubut">Chubut</option>
+                    <option value="Chaco">Chaco</option>
+                    <option value="Corrientes">Corrientes</option>
+                    <option value="Cordoba">Córdoba</option>
+                    <option value="Entre Rios">Entre Ríos</option>
+                    <option value="Formosa">Formosa</option>
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="La Pampa">La Pampa</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquen">Neuquén</option>
+                    <option value="Rio Negro">Río Negro</option>
+                    <option value="Salta">Salta</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="San Luis">San Luis</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                    <option value="Santiago del Estero">Santiago del Estero</option>
+                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                    <option value="Tucuman">Tucumán</option>
                 </select>
             </div>
         </div>
             <div>
                 <label for="observRegister" class="input-label">Observaciones</label>
-                <textarea name="" id="observRegister" cols="30" rows="5" class="input-field" placeholder="Su mensaje..." maxlength="150"></textarea>
+                <textarea name="observaciones" id="observRegister" cols="30" rows="5" class="input-field" placeholder="Su mensaje..." maxlength="150"></textarea>
             </div>
             <button type="submit" class="button-submit">Registrarse</button>
         </form>
@@ -154,6 +158,12 @@
         
     </footer>
 
+    <!-- SCRIPT BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- SCRIPT SWEETALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- MIS SCRIPT  -->
+    <script src="/JS/login.js"></script>
+    <script src="/JS/storage.js"></script>i
 </body>
 </html>
