@@ -1,57 +1,63 @@
-const registeredUsers = [
+const usrRegistrados = [
     {
         nombre: "Melisa Diaz",
         email: "admin@admin.com",
         password: "admin",
-        fechaNacimiento: "1985-04-15",
+        fechaNacimiento: "15/04/1996",
         provincia: "Santa Fe",
-        observaciones: "Observaciones de Ana Pérez",
-        rol: "ROL_ADMIN"
+        observaciones: "Observaciones de Melisa Diaz",
+        rol: "ROL_ADMIN",
+        id: crypto.randomUUID()
     },
     {
         nombre: "Ana Pérez",
         email: "ana.perez@example.com",
         password: "password123",
-        fechaNacimiento: "1985-04-15",
+        fechaNacimiento: "28/01/1985",
         provincia: "Buenos Aires",
         observaciones: "Observaciones de Ana Pérez",
-        rol: "ROL_USER"
+        rol: "ROL_USER",
+        id: crypto.randomUUID()
     },
     {
         nombre: "Juan Gómez",
         email: "juan.gomez@example.com",
         password: "securePassword",
-        fechaNacimiento: "1990-07-25",
+        fechaNacimiento: "02/06/2001",
         provincia: "Córdoba",
         observaciones: "Observaciones de Juan Gómez",
-        rol: "ROL_USER"
+        rol: "ROL_USER",
+        id: crypto.randomUUID()
     },
     {
         nombre: "María Rodríguez",
         email: "maria.rodriguez@example.com",
         password: "myp@ssw0rd",
-        fechaNacimiento: "1988-02-10",
+        fechaNacimiento: "05/12/1997",
         provincia: "Catamarca",
         observaciones: "Observaciones de María Rodríguez",
-        rol: "ROL_USER"
+        rol: "ROL_USER",
+        id: crypto.randomUUID()
     },
     {
         nombre: "Carlos López",
         email: "carlos.lopez@example.com",
         password: "secure123",
-        fechaNacimiento: "1993-11-05",
+        fechaNacimiento: "19/10/2002",
         provincia: "Chubut",
         observaciones: "Observaciones de Carlos López",
-        rol: "ROL_USER"
+        rol: "ROL_USER",
+        id: crypto.randomUUID()
     },
     {
         nombre: "Laura Martínez",
         email: "laura.martinez@example.com",
         password: "passw0rd123",
-        fechaNacimiento: "1989-09-20",
+        fechaNacimiento: "01/12/2003",
         provincia: "Entre Ríos",
         observaciones: "Observaciones de Laura Martínez",
         rol: "ROL_USER",
+        id: crypto.randomUUID()
     }
 ];
 
@@ -90,13 +96,17 @@ const products = [
     }
 ];
 
+
+
 const storageUsers = JSON.parse(localStorage.getItem('usuariosRegistrados'));
 const storageProducts = JSON.parse(localStorage.getItem('productosGuardados'));
+
+
 
 if(storageProducts === null){
     localStorage.setItem("productosGuardados", JSON.stringify(products));
 }
 
 if(storageUsers === null){
-    localStorage.setItem("usuariosRegistrados", JSON.stringify(registeredUsers));
+    localStorage.setItem("usuariosRegistrados", JSON.stringify(usrRegistrados));
 }

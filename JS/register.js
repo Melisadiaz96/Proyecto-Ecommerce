@@ -1,7 +1,7 @@
 const storageUser = JSON.parse(localStorage.getItem('usuariosRegistrados'));
 const formRegister = document.querySelector(".form-registro");
 const inputEmail = document.getElementById("emailRegister")
-const userExists = storageUser.find((usr) => usr.email === inputEmail.value);
+const userExists = storageUser.find((usr) => usr.email === inputEmail.value.trim());
 
 formRegister.addEventListener('submit', (e) => {
 
@@ -37,12 +37,12 @@ formRegister.addEventListener('submit', (e) => {
     } else {
 
         const newUser = {
-            nombre: formRegister.elements.name.value,
-            email: formRegister.elements.correo.value,
-            password: formRegister.elements.contraseña.value,
-            fechaNacimiento: formRegister.elements.fechaNacimiento.value,
-            provincia: formRegister.elements.provincia.value,
-            observaciones: formRegister.elements.observaciones.value,
+            nombre: formRegister.elements.name.value.trim(),
+            email: formRegister.elements.correo.value.trim(),
+            password: formRegister.elements.contraseña.value.trim(),
+            fechaNacimiento: formRegister.elements.fechaNacimiento.value.trim(),
+            provincia: formRegister.elements.provincia.value.trim(),
+            observaciones: formRegister.elements.observaciones.value.trim(),
             rol: "ROL_USER"
         }
 

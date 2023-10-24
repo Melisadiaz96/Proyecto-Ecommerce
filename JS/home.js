@@ -23,7 +23,7 @@ function pintarProducto(productosAPintar){
                     <p>Fecha de Ingreso</p>
                     <p>${product.fechaIngresado}</p>
                 </div>
-                <p class="precio">${product.precio}</p>
+                <p class="precio">$${product.precio}</p>
             </div>
         </div>
         <div class="card-footer">

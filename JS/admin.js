@@ -3,6 +3,7 @@ const tableProductsHTML = document.querySelector(".table-products");
 const submitBtn = document.querySelectorAll('.btn[type="submit"]')
 const form = document.getElementById('formulario')
 let edit;
+const modalForm = new bootstrap.Modal('#modalForm');
 
 function pintarTablaProductos(arrayProductos) {
     tableProductsHTML.innerHTML = "";
@@ -19,8 +20,8 @@ function pintarTablaProductos(arrayProductos) {
             <td>${product.fechaIngresado}</td>
             <td>
                 <div class="buttons-action">
-                    <button class="button-action button-edit" data-bs-toggle="modal" data-bs-target="#modalForm" data-id='${product.id}'><i class="fa-solid fa-pen-to-square"></i></button>
-                    <button class="button-action button-delete" data-id='${product.id}'><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="button-action button-edit" data-bs-toggle="modal" data-bs-target="#modalForm" onclick="editarProducto('${product.id}')"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="button-action button-delete" onclick="borrarProducto('${product.id}')"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
             </td>
         </tr> `
@@ -65,17 +66,10 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem('productosGuardados', JSON.stringify(productosGuardados));
     pintarTablaProductos(productosGuardados);
     form.reset()
-
+    modalForm.hide()
 })
 
 
-const btnEdit = document.querySelectorAll(".button-edit")
-btnEdit.forEach(prodEdit => {
-    prodEdit.addEventListener('click', () => {
-        const prodSelected = prodEdit.dataset.id
-        editarProducto(prodSelected);
-    })
-})
 
 function editarProducto(prodAEditar) {
 
@@ -95,14 +89,6 @@ function editarProducto(prodAEditar) {
     }
 }
 
-const btnDelete = document.querySelectorAll(".button-delete")
-btnDelete.forEach(prodDelete => {
-    prodDelete.addEventListener('click', () => {
-        const prodSelected = prodDelete.dataset.id
-        borrarProducto(prodSelected)
-        
-    })
-})
 
 
 function borrarProducto(prodABorrar) {
@@ -124,6 +110,7 @@ function borrarProducto(prodABorrar) {
 
             productosGuardados.splice(productIndex, 1);
             pintarTablaProductos(productosGuardados);
+            localStorage.setItem("productosGuardados", JSON.stringify(productosGuardados))
             Swal.fire({
                 title: 'Eliminado!',
                 icon: 'success',

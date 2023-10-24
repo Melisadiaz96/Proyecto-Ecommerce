@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbar" data-collapsed="false">
                     <ul class="navbar-nav nav-list-item me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link " aria-current="page" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
@@ -40,17 +40,18 @@
 
                     </ul>
                     <div class="header-user">
-
-                        <a id="registerNav" class="nav-link active" href="/pages/register/register.html">Registrate</a>
+                        
+                        <a id="registerNav" class="nav-link link-register active" href="/pages/register/register.html">Registrate</a>
                         <div class="contain-btn-login">
-                            <button type="button" class="btn button-login" id="login" data-bs-toggle="modal"
-                                data-bs-target="#modalLogin" data-toggle="collapse-button" data-target="#navbar">Iniciar sesión</button>
-
+                            <button type="button" class="button-login" id="login" data-bs-toggle="modal"
+                                data-bs-target="#modalLogin">Iniciar sesión</button>
+                                <button type="button" class="button-login d-none" id="logout" >Cerrar sesión</button>
+                                
 
                             
                         </div>
-                        <img class="d-none" src="https://img.freepik.com/free-icon/user_318-159711.jpg?w=2000" alt=""
-                            class="header-user-img">
+                        <div class="info-user d-none"></div>
+                        
                         <i class="fa-solid fa-cart-shopping"></i>
 
                     </div>
@@ -65,7 +66,7 @@
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form>
+                                            <form id="form-login">
                                                 <div class="mb-3">
                                                     <label for="inputLogin"
                                                         class="col-form-label">Email:</label>
@@ -73,22 +74,27 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="passwordLogin" class="col-form-label">Contraseña:</label>
-                                                    <input pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" placeholder="********" type="password" name="passwordLogin" class="form-control" id="passwordLogin">
+                                                    <input placeholder="********" type="password" name="passwordLogin" class="form-control" id="passwordLogin">
                                                 </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="submit"  class="btn button-submit">Iniciar sesión</button>
+                                                <div class="modal-footer">
+                                            <button type="submit"  class="button-submit">Iniciar sesión</button>
+                                            
                                             <div class="link-register">¿Aún no tenes cuenta?
                                             <a href="/pages/register/register.html">Registrate aquí</a>
                                             </div>
                                         </div>
+                                            </form>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
             </div>
         </nav>
     </header>
+
+    <!------HEADER END ------>
+
 
     <main class="main-container-form bg-principal">
         <form action="" class="main-form form-registro" >
@@ -204,5 +210,6 @@
     <script src="/JS/storage.js"></script>
     <script src="/JS/login.js"></script>
     <script src="/JS/register.js"></script>
+    <script src="/JS/user-current.js"></script>
 </body>
 </html>
