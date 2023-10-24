@@ -57,11 +57,3 @@ function borrarUsuario(userABorrar) {
 
 }
 
-// const btnDelete = document.querySelectorAll(".btn-delete");
-// btnDelete.forEach(usrDelete => {
-//     usrDelete.addEventListener('click', () => {
-//         const usrSelected = usrDelete.dataset.id
-//         borrarUsuario(usrSelected)
-//         console.log(usrDelete)
-//     })
-// })
