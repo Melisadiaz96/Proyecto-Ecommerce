@@ -34,15 +34,17 @@ formLogin.addEventListener('submit', function (e) {
             setTimeout(function(){
                 window.location.href = '/index.html'
             }, 100)
+            localStorage.setItem('currentUser', JSON.stringify(userExist));
         }
     } else {
         error()
         errorEmail = true;
     }
-
+    
     delete userExist.password
+    
 
-    localStorage.setItem('currentUser', JSON.stringify(userExist));
+    
     
     formLogin.reset()
 

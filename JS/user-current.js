@@ -5,6 +5,7 @@ const btnLogout = document.getElementById('logout');
 
 if (currentUser) {
     const usrInfo = document.querySelector('.info-user');
+    delete currentUser.password
     if (usrInfo.classList.contains('d-none')){
         usrInfo.classList.remove('d-none')
     }
